@@ -1,0 +1,59 @@
+plugins {
+    // Apply the Java plugin to add support for Java
+    id 'java'
+}
+
+group 'com.revature' // label for a group of projects that you create
+version '1.0-SNAPSHOT' // which version of the project you are currently on
+
+repositories {
+    //Uses Maven's Central Repository (That Gradle also uses) to resolve dependenices.
+    mavenCentral()
+}
+
+dependencies {
+    // This is where we add our dependencies
+
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.7'
+
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    // use Junit platform for testing
+    useJUnitPlatform()
+}
+
+
+/**
+ *  Gradle (and Maven and Ant) is an open source build automation tool and dependency manager.
+ *
+ *  Build Automation Tool:
+ *      Automates the task of creating a deployable product, in this case a JAR file
+ *      The tasks that it can automate can include, compiling source code, packaging binary code,
+ *          running automated tests, deploying to an environment, creating docs, etc .
+ *      Benefits:
+ *          > Consistency - Build automation tool will work the same way every time.
+ *          > Speed - because it automates it, means we waste less time as developers.
+ *          > Dependency Management.
+ *
+ *  Dependency Management:
+ *      Gradle will automatically download and manage our dependencies for us.
+ *
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+
